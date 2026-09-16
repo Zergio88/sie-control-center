@@ -2,6 +2,7 @@ import { Navigate, createBrowserRouter } from 'react-router-dom';
 import { AdminRoute } from '@/auth/AdminRoute';
 import { ProtectedRoute } from '@/auth/ProtectedRoute';
 import { AppLayout } from '@/layouts/AppLayout';
+import { DevicesPage } from '@/pages/DevicesPage';
 import { LoginPage } from '@/pages/LoginPage';
 import PlaceholderPage from '@/pages/PlaceholderPage';
 
@@ -22,7 +23,7 @@ export const router = createBrowserRouter([
     ),
     children: [
       { index: true, element: <Navigate to="/devices" replace /> },
-      { path: 'devices', element: <PlaceholderPage title="Dispositivos" /> },
+      { path: 'devices', element: <DevicesPage /> },
       { path: 'inventory', element: <PlaceholderPage title="Registrar inventario" /> },
       { path: 'serial-numbers/search', element: <PlaceholderPage title="Buscar serial" /> },
       {
