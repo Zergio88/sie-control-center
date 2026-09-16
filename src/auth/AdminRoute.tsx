@@ -1,0 +1,14 @@
+import type { ReactNode } from 'react';
+import { Navigate } from 'react-router-dom';
+import { useAuth } from '@/auth/useAuth';
+
+/** Requires role ADMIN; everything else is sent back to /devices. */
+export function AdminRoute({ children }: { children: ReactNode }) {
+  const { role } = useAuth();
+
+  if (role !== 'ADMIN') {
+    return <Navigate to="/devices" replace />;
+  }
+
+  return <>{children}</>;
+}
