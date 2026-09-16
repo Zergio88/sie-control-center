@@ -7,6 +7,7 @@ backend at [sie-sistema-integral-inventario](https://github.com/Zergio88/sie-sis
 ## Stack
 
 - React 19, React Router 7 (data router / `createBrowserRouter`)
+- TanStack Query 5 (server state)
 - TypeScript 6, Vite 8, Tailwind CSS 4 (`@theme` design tokens)
 - oxlint (linting) + Prettier (formatting)
 
@@ -77,10 +78,10 @@ a freshly migrated, empty database.
 src/
   api/          # HTTP clients (auth header, 401/403 → logout)
   auth/         # AuthContext, ProtectedRoute, AdminRoute
-  components/   # shared UI (Button, Table, EmptyState, ErrorState…)
+  components/   # shared UI (Button, Table, EmptyState, ErrorState, Badge…)
   hooks/        # data hooks (useDevices, …)
   layouts/      # AppLayout (dark-violet sidebar + light content)
-  lib/          # helpers (API error mapping, …)
+  lib/          # helpers (API error mapping, date formatting, …)
   pages/        # route pages (Login, Devices, Users, catalog…)
   routes/       # routes.tsx — single source of truth for the route tree
   types/        # domain types mirroring the backend DTOs
@@ -90,4 +91,5 @@ src/
 
 Phase 0 bootstrap → DONE
 Phase 1 auth + layout shell → DONE
-Phases 2–9 → pending
+Phase 2 device list → DONE
+Phases 3–9 → pending
