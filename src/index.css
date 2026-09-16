@@ -1,65 +1,81 @@
-:root {
-  /* Palette base — dark-violet sidebar (Phase 1) + light content */
-  --violet-950: #2e1065;
-  --violet-900: #3b1280;
-  --violet-800: #4c1d95;
-  --violet-600: #7c3aed;
-  --violet-100: #ede9fe;
-  --surface: #ffffff;
-  --surface-muted: #f4f4f5;
-  --border: #e4e4e7;
-  --text: #18181b;
-  --text-muted: #52525b;
-  --danger: #dc2626;
-  --danger-bg: #fee2e2;
-  --success: #16a34a;
-  --success-bg: #dcfce7;
-  --warning: #d97706;
-  --warning-bg: #fef3c7;
+@import 'tailwindcss';
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+@theme {
+  /* Site palette — dark-violet sidebar (Phase 1) + light content */
+  --color-violet-950: #2e1065;
+  --color-violet-900: #3b1280;
+  --color-violet-800: #4c1d95;
+  --color-violet-600: #7c3aed;
+  --color-violet-100: #ede9fe;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-ink: #18181b;
+  --color-ink-muted: #52525b;
+  --color-danger: #dc2626;
+  --color-danger-bg: #fee2e2;
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+  --color-warning: #d97706;
+  --color-warning-bg: #fef3c7;
 
-  color-scheme: light;
-  color: var(--text);
-  background: var(--surface);
-  font: 16px/1.5 var(--sans);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --font-sans: system-ui, 'Segoe UI', Roboto, sans-serif;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    min-height: 100vh;
+    font-synthesis: none;
+  }
 }
 
-body {
-  margin: 0;
-  min-height: 100svh;
-}
+@layer components {
+  /* --- Buttons --- */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-600 disabled:pointer-events-none disabled:opacity-60;
+  }
+  .btn-primary {
+    @apply bg-violet-800 text-white hover:bg-violet-900;
+  }
+  .btn-secondary {
+    @apply border border-border bg-surface text-ink hover:bg-surface-muted;
+  }
+  .btn-danger {
+    @apply bg-danger text-white hover:opacity-90;
+  }
+  .btn-block {
+    @apply w-full;
+  }
 
-h1,
-h2,
-h3,
-h4,
-p {
-  margin: 0;
-}
+  /* --- Form controls --- */
+  .input {
+    @apply w-full rounded-md border border-border bg-surface px-3 py-2 text-sm text-ink shadow-xs placeholder:text-ink-muted focus:border-violet-600 focus:outline-2 focus:outline-offset-0 focus:outline-violet-600 disabled:cursor-not-allowed disabled:bg-surface-muted;
+  }
+  .input-error {
+    @apply border-danger focus:border-danger focus:outline-danger;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink;
+  }
+  .field-error {
+    @apply mt-1.5 text-sm text-danger;
+  }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-a {
-  color: inherit;
-}
-
-button,
-input,
-select {
-  font: inherit;
+  /* --- Sidebar --- */
+  .sidebar-link {
+    @apply flex items-center gap-3 rounded-md px-3 py-2 text-sm text-violet-100/80 transition-colors hover:bg-white/10 hover:text-white;
+  }
+  .sidebar-link-active {
+    @apply bg-violet-800 text-white hover:bg-violet-800;
+  }
 }

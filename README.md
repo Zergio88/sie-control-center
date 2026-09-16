@@ -7,7 +7,7 @@ backend at [sie-sistema-integral-inventario](https://github.com/Zergio88/sie-sis
 ## Stack
 
 - React 19, React Router 7 (data router / `createBrowserRouter`)
-- TypeScript 6, Vite 8
+- TypeScript 6, Vite 8, Tailwind CSS 4 (`@theme` design tokens)
 - oxlint (linting) + Prettier (formatting)
 
 ## Prerequisites
@@ -89,3 +89,5 @@ src/
 ## Development phases
 
 Phase 0 bootstrap → DONE
+Phase 1 auth + layout shell → DONE
+Phases 2–9 → pending
