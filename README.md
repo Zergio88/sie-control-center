@@ -92,4 +92,5 @@ src/
 Phase 0 bootstrap → DONE
 Phase 1 auth + layout shell → DONE
 Phase 2 device list → DONE
-Phases 3–9 → pending
+Phase 3 inventory capture → DONE
+Phases 4–9 → pending

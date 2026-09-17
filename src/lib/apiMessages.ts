@@ -10,6 +10,11 @@ const EXACT_MESSAGES: Record<string, string> = {
   'Invalid email or password': 'Email o contraseña incorrectos.',
   'User account is disabled': 'Tu cuenta está deshabilitada. Contacta a un administrador.',
   'Email already registered': 'Ese email ya está registrado.',
+  'Serial number already exists': 'El número de serie ya existe.',
+  'Device already has a primary serial number':
+    'El dispositivo ya tiene un número de serie principal.',
+  'Device type not found': 'El modelo seleccionado ya no existe.',
+  'Pallet not found': 'El pallet seleccionado ya no existe.',
 };
 
 export function mapApiMessage(error: unknown): string {
