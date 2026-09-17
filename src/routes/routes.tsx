@@ -3,10 +3,15 @@ import { AdminRoute } from '@/auth/AdminRoute';
 import { ProtectedRoute } from '@/auth/ProtectedRoute';
 import { AppLayout } from '@/layouts/AppLayout';
 import { DevicesPage } from '@/pages/DevicesPage';
+import { DeviceTypesPage } from '@/pages/DeviceTypesPage';
 import { InventoryEntryPage } from '@/pages/InventoryEntryPage';
+import { LocationsPage } from '@/pages/LocationsPage';
 import { LoginPage } from '@/pages/LoginPage';
+import { PalletsPage } from '@/pages/PalletsPage';
 import PlaceholderPage from '@/pages/PlaceholderPage';
+import { SpareLotsPage } from '@/pages/SpareLotsPage';
 import { UsersPage } from '@/pages/UsersPage';
+import { ZonesPage } from '@/pages/ZonesPage';
 
 /**
  * Single source of truth for the app's route tree.
@@ -40,11 +45,46 @@ export const router = createBrowserRouter([
         path: 'catalog',
         children: [
           { index: true, element: <Navigate to="/catalog/zones" replace /> },
-          { path: 'zones', element: <PlaceholderPage title="Zonas" /> },
-          { path: 'locations', element: <PlaceholderPage title="Ubicaciones" /> },
-          { path: 'pallets', element: <PlaceholderPage title="Pallets" /> },
-          { path: 'device-types', element: <PlaceholderPage title="Tipos de dispositivo" /> },
-          { path: 'spare-lots', element: <PlaceholderPage title="Lotes de repuestos" /> },
+          {
+            path: 'zones',
+            element: (
+              <AdminRoute>
+                <ZonesPage />
+              </AdminRoute>
+            ),
+          },
+          {
+            path: 'locations',
+            element: (
+              <AdminRoute>
+                <LocationsPage />
+              </AdminRoute>
+            ),
+          },
+          {
+            path: 'pallets',
+            element: (
+              <AdminRoute>
+                <PalletsPage />
+              </AdminRoute>
+            ),
+          },
+          {
+            path: 'device-types',
+            element: (
+              <AdminRoute>
+                <DeviceTypesPage />
+              </AdminRoute>
+            ),
+          },
+          {
+            path: 'spare-lots',
+            element: (
+              <AdminRoute>
+                <SpareLotsPage />
+              </AdminRoute>
+            ),
+          },
         ],
       },
     ],

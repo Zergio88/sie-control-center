@@ -119,7 +119,7 @@ export function UsersPage() {
         <div className="flex items-center gap-3">
           <ActiveBadge active={user.active} />
           <Button
-            variant="ghost"
+            variant={user.active ? 'danger-outline' : 'secondary'}
             className="px-2 py-1 text-xs"
             disabled={mutating}
             onClick={() => handleToggleActive(user)}

@@ -94,4 +94,5 @@ Phase 1 auth + layout shell → DONE
 Phase 2 device list → DONE
 Phase 3 inventory capture → DONE
 Phase 4 user management → DONE
-Phases 5–9 → pending
+Phase 5 catalog pages → DONE
+Phases 6–9 → pending
