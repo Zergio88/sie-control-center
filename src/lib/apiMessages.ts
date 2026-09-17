@@ -15,6 +15,14 @@ const EXACT_MESSAGES: Record<string, string> = {
     'El dispositivo ya tiene un número de serie principal.',
   'Device type not found': 'El modelo seleccionado ya no existe.',
   'Pallet not found': 'El pallet seleccionado ya no existe.',
+  'You cannot deactivate your own account':
+    'No puedes desactivar tu propia cuenta. Asigna un administrador activo antes.',
+  'You cannot demote your own role': 'No puedes cambiar tu propio rol.',
+  'Cannot deactivate the last active admin':
+    'No se puede desactivar el último administrador activo. Crea otro administrador primero.',
+  'Cannot remove the role of the last active admin':
+    'No se puede cambiar el rol del último administrador activo. Crea otro administrador primero.',
+  'Role must be ADMIN or OPERATOR': 'El rol debe ser ADMIN u OPERATOR.',
 };
 
 export function mapApiMessage(error: unknown): string {
