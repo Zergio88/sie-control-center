@@ -9,6 +9,7 @@ import { LocationsPage } from '@/pages/LocationsPage';
 import { LoginPage } from '@/pages/LoginPage';
 import { PalletsPage } from '@/pages/PalletsPage';
 import PlaceholderPage from '@/pages/PlaceholderPage';
+import { SerialSearchPage } from '@/pages/SerialSearchPage';
 import { SpareLotsPage } from '@/pages/SpareLotsPage';
 import { UsersPage } from '@/pages/UsersPage';
 import { ZonesPage } from '@/pages/ZonesPage';
@@ -32,7 +33,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Navigate to="/devices" replace /> },
       { path: 'devices', element: <DevicesPage /> },
       { path: 'inventory', element: <InventoryEntryPage /> },
-      { path: 'serial-numbers/search', element: <PlaceholderPage title="Buscar serial" /> },
+      { path: 'serial-numbers/search', element: <SerialSearchPage /> },
       {
         path: 'users',
         element: (
