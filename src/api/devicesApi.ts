@@ -6,4 +6,9 @@ function list(): Promise<Device[]> {
   return request<Device[]>('/api/devices');
 }
 
-export const devicesApi = { list };
+/** GET /api/devices/{id} — single device (used by the serial search result). */
+function getById(id: number): Promise<Device> {
+  return request<Device>(`/api/devices/${id}`);
+}
+
+export const devicesApi = { list, getById };
