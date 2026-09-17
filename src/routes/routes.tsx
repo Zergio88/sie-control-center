@@ -6,6 +6,7 @@ import { DevicesPage } from '@/pages/DevicesPage';
 import { InventoryEntryPage } from '@/pages/InventoryEntryPage';
 import { LoginPage } from '@/pages/LoginPage';
 import PlaceholderPage from '@/pages/PlaceholderPage';
+import { UsersPage } from '@/pages/UsersPage';
 
 /**
  * Single source of truth for the app's route tree.
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
         path: 'users',
         element: (
           <AdminRoute>
-            <PlaceholderPage title="Usuarios" />
+            <UsersPage />
           </AdminRoute>
         ),
       },
