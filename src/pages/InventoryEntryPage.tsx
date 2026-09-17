@@ -247,7 +247,7 @@ export function InventoryEntryPage() {
                       Principal
                     </label>
                     <Button
-                      variant="ghost"
+                      variant="danger-outline"
                       className="mb-0.5"
                       aria-label={`Eliminar serial ${index + 1}`}
                       onClick={() => remove(index)}
