@@ -95,4 +95,5 @@ Phase 2 device list → DONE
 Phase 3 inventory capture → DONE
 Phase 4 user management → DONE
 Phase 5 catalog pages → DONE
-Phases 6–9 → pending
+Phase 6 serial search + polish → DONE
+Phases 7–9 → pending
