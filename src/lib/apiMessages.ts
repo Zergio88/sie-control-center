@@ -14,6 +14,8 @@ const EXACT_MESSAGES: Record<string, string> = {
   'Device already has a primary serial number':
     'El dispositivo ya tiene un número de serie principal.',
   'Device type not found': 'El modelo seleccionado ya no existe.',
+  'Device not found': 'Dispositivo no encontrado.',
+  'Serial number not found': 'Número de serie no encontrado.',
   'Pallet not found': 'El pallet seleccionado ya no existe.',
   'Zone not found': 'La zona seleccionada ya no existe.',
   'Location not found': 'La ubicación seleccionada ya no existe.',
