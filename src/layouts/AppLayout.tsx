@@ -13,7 +13,7 @@ const NAV_ITEMS: readonly NavItem[] = [
   { to: '/devices', label: 'Dispositivos', adminOnly: false },
   { to: '/inventory', label: 'Registrar inventario', adminOnly: false },
   { to: '/serial-numbers/search', label: 'Buscar serial', adminOnly: false },
-  { to: '/catalog/zones', label: 'Catálogo', adminOnly: false },
+  { to: '/catalog/zones', label: 'Catálogo', adminOnly: true },
   { to: '/users', label: 'Usuarios', adminOnly: true },
 ];
 

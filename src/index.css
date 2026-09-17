@@ -53,6 +53,9 @@
   .btn-danger {
     @apply bg-danger text-white hover:opacity-90;
   }
+  .btn-danger-outline {
+    @apply border border-danger/40 bg-danger-bg/60 text-danger hover:bg-danger-bg;
+  }
   .btn-block {
     @apply w-full;
   }
