@@ -13,3 +13,11 @@ export interface Pallet {
   createdAt: string | null;
   updatedAt: string | null;
 }
+
+/** Request body of POST /api/pallets. `locationId` and `maxFloors` are required. */
+export interface CreatePalletRequest {
+  locationId: number;
+  code: string;
+  maxFloors: number;
+  notes?: string | null;
+}

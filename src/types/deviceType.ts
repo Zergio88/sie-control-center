@@ -12,3 +12,12 @@ export interface DeviceType {
   createdAt: string | null;
   updatedAt: string | null;
 }
+
+/** Request body of POST /api/device-types. `name` and `category` are required. */
+export interface CreateDeviceTypeRequest {
+  name: string;
+  brand?: string | null;
+  model?: string | null;
+  category: string;
+  description?: string | null;
+}

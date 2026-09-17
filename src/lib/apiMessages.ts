@@ -15,6 +15,16 @@ const EXACT_MESSAGES: Record<string, string> = {
     'El dispositivo ya tiene un número de serie principal.',
   'Device type not found': 'El modelo seleccionado ya no existe.',
   'Pallet not found': 'El pallet seleccionado ya no existe.',
+  'Zone not found': 'La zona seleccionada ya no existe.',
+  'Location not found': 'La ubicación seleccionada ya no existe.',
+  'Spare lot not found': 'El lote de repuestos seleccionado ya no existe.',
+  'Data conflict: the operation violates a database constraint':
+    'No se puede completar la operación: otros registros lo referencian.',
+  'Zone is required': 'Selecciona una zona.',
+  'Location is required': 'La ubicación es obligatoria.',
+  'Location ID is required': 'Selecciona una ubicación.',
+  'Location type is required': 'El tipo de ubicación es obligatorio.',
+  'Max floors is required': 'El máximo de pisos es obligatorio.',
   'You cannot deactivate your own account':
     'No puedes desactivar tu propia cuenta. Asigna un administrador activo antes.',
   'You cannot demote your own role': 'No puedes cambiar tu propio rol.',
